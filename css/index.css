@@ -89,21 +89,33 @@ body {
     border: 2px solid #9c3333;
     border-radius: 8px;
     font-size: 19px;
-    color: #292929;
+    color:#233153;
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
     z-index: 1;
     overflow: hidden;
+    transition: .5s;
 }
 
 .btn-box a:nth-child(2){
     background: transparent;
     color: #9c3333;
 } 
+.btn-box a:nth-child(2):hover{
+    color:#233153;
+}
 .btn-box a:nth-child(2)::before{
-    background: transparent;
+    background:#9c3333;
+    
+} 
+.btn-box a:nth-child(1):hover{
+    
     color: #9c3333;
+} 
+.btn-box a:nth-child(1)::before{
+    background:#233153;
+    
 } 
 
 .btn-box a::before{

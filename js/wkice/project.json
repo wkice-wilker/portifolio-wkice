@@ -1,3 +1,4 @@
+
 {
 	"file" : "scene.json",
 	"general" : 
@@ -16,4 +17,4 @@
 	"title" : "wkice",
 	"type" : "scene",
 	"version" : 0
-}
+})
