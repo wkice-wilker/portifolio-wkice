@@ -40,10 +40,23 @@ body {
 }
 
 .logo{
+    position: relative;
     font-size: 25px;
     color: #bbbbbb;
     text-decoration: none;
     font-weight: 600;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #132835;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
 }
 
 .navbar a {
@@ -54,6 +67,21 @@ body {
     margin-left: 35px;
     transition: .3s;
 }
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #132835;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2s;
+    z-index: 100;
+   
+}
+
 
 .navbar a:hover,
 .navbar a.ativado {
@@ -70,45 +98,114 @@ body {
     padding: 0 30% 0 10%;
 }
 
+
+
 .home-image{
     background: url('../imagens/wkice\ e-sport.png');
-    width: 50px;
-    height: 50px;
-    top: 30%;
+    width: 500px;
+    height: 60%;
+    top: 20%;
     left: 60%;
-    padding: 15%;
+    background-position: 20%;
     display: flex;
     position: absolute;
+    align-items: center;
    background-repeat: no-repeat;
    background-size:contain;
 
+}
+
+.home-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #132835;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;
+   
 }
 .home-content{
     max-width: 600px;
 }
 .home-content h1{
+    position: relative;
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
     color:aliceblue;
 }
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #132835;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
 .home-content h3 {
+    position: relative;
     font-size: 32px;
     font-weight: 700;
     color:#9c3333;
     
 }
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #132835;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
 .home-content p{
+     position: relative;
      font-size: 16px;
      margin: 20px 0 30px;
 }
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #132835;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.8s;
+}
 
 .home-content .btn-box{
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 400px;
     height: 50px;
 }
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #132835;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2s;
+    z-index: 2;
+   
+}
+
 
 .btn-box a{
     position: relative;
@@ -175,6 +272,20 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #132835;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.1s;
+    z-index: 2;
+   
+}
+
 
 .home-sci a{
     position: relative;
@@ -207,4 +318,10 @@ body {
 
 .home-sci a:hover::before{
     width: 100%;
+}
+
+@keyframes showRight{ 
+    100%{
+        width: 0;
+    }
 }
