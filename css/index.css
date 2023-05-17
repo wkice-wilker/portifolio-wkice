@@ -103,7 +103,6 @@ body {
 
 .navbar a:hover,
 .navbar a.ativado {
-
  color: var(--main-color);
 } 
 
