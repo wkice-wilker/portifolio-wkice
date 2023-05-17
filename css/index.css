@@ -21,7 +21,17 @@
 
 html{
     font-size: 62.5%;
-    overflow: hidden;
+    
+}
+::-webkit-scrollbar{
+    background: var(--bg-color);
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+
 }
 
 
@@ -437,3 +447,93 @@ span{
     
 } 
 
+
+.educacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 10rem;
+}
+
+.educacao .educacao-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+}
+.educacao-row .educacao-column {
+    flex: 1 1 40rem;
+}
+
+.educacao-column .titulo{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.educacao-column .educacao-box{
+    border-left: .2rem solid var(--main-color);
+}
+
+.educacao-box .educacao-content{
+    position: relative;
+    padding-left: 2rem;
+}
+
+.educacao-box .educacao-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+
+}
+
+.educacao-content .content{
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.educacao-content .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.educacao-content .content:hover::before{
+    width: 100%;
+}
+
+.educacao-content .content .year{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+    font-size: 1.8rem;
+}
+
+.educacao-content .content .year i{
+    padding-right: .10rem;
+}
+
+.educacao-content .content h3{
+    font-size: 2rem;
+}
+
+.educacao-content .content p{
+    font-size: 1.5rem;
+    padding-top: .5rem;
+    
+}
