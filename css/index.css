@@ -129,6 +129,8 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+
+/*Página Home*/
 .home{
     display: flex;
     background: url('../js/wkice/project.json') no-repeat;
@@ -373,7 +375,7 @@ section {
     }
 }
 
-
+/*Página Sobre*/
 .sobre{
     display: flex;
     justify-content: center;
@@ -447,7 +449,7 @@ span{
     
 } 
 
-
+/*Página Educação*/
 .educacao{
     display: flex;
     justify-content: center;
@@ -537,3 +539,223 @@ span{
     padding-top: .5rem;
     
 }
+
+/*Página Habilidades*/
+.habilidade{
+    min-height: auto;
+    padding-bottom: 17rem;
+    background-color: var(--second-bg-color);
+
+}
+
+.habilidade-linha{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+
+}
+.habilidade-linha .habilidade-coluna{
+    flex: 1 1 40rem;
+}
+.habilidade-coluna .titulo{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+.habilidade-box .habilidade-content{
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+.habilidade-box .habilidade-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.habilidade-box .habilidade-content:hover::before{
+    width: 100%;
+}
+
+.habilidade-content .progresso{
+    padding: 1rem 0;
+}
+
+.habilidade-content .progresso h3{
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.habilidade-content .progresso h3 span{
+    color: var(--text-color);
+}
+.habilidade-content .progresso .bar{
+    height: 2.5rem;
+    border-radius: .6rem;
+    border:  .2rem solid var(--main-color);
+    padding: .3rem;
+    margin: 1rem 0;
+}
+
+.habilidade-content .progresso .bar span{
+    display: block;
+    height: 100%;
+    border-radius: .3rem;
+    background-color: var(--main-color);
+}
+
+/*para controlar a barra de prograsso das habilidades*/
+
+.habilidade-coluna:nth-child(1) .habilidade-content .progresso:nth-child(1) .bar span{
+    width: 80%;
+}
+.habilidade-coluna:nth-child(1) .habilidade-content .progresso:nth-child(2) .bar span{
+    width: 80%;
+}
+.habilidade-coluna:nth-child(1) .habilidade-content .progresso:nth-child(3) .bar span{
+    width: 40%;
+}
+.habilidade-coluna:nth-child(1) .habilidade-content .progresso:nth-child(4) .bar span{
+    width: 55%;
+}
+.habilidade-coluna:nth-child(2) .habilidade-content .progresso:nth-child(1) .bar span{
+    width: 90%;
+}
+.habilidade-coluna:nth-child(2) .habilidade-content .progresso:nth-child(2) .bar span{
+    width: 80%;
+}
+.habilidade-coluna:nth-child(2) .habilidade-content .progresso:nth-child(3) .bar span{
+    width: 65%;
+}
+
+
+/*Página contato*/
+.contato{
+    background:-webkit-image-set('canvas');
+    min-height: auto;
+    padding-bottom: 4rem;
+}
+
+.contato form{
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.contato form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contato form .input-box .input-field{
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+.contato form .input-box .input-field input,
+.contato form .textarea-field textarea{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    background: transparent;
+    color: var(--text-color);
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+.contato form .input-box .input-field input::placeholder,
+.contato form .textarea-field textarea::placeholder{
+    color: var(--text-color);
+}
+
+.contato form .focus{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--second-bg-color);
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+.contato form .input-box .input-field input:focus~.focus,
+.contato form .input-box .input-field input:valid~.focus,
+.contato form .textarea-field textarea:focus~.focus,
+.contato form .textarea-field textarea:valid~.focus{
+width: 100%;
+}
+
+.contato form .textarea-field{
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+.contato form .textarea-field textarea{
+    resize: none;
+}
+.contato form .btn-box.btns .btn{
+    cursor: pointer;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background-color: var(--second-bg-color);
+}
+
+.footer-text{
+    font-size: 1rem;
+}
+
+.footer-iconTop{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background-color: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+.footer-iconTop a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+
+}
+.footer-iconTop a:hover::before{
+    width: 100%;
+}
+
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--bg-color);
+    transition: .5s;
+}
+
+.footer-iconTop a:hover i{
+    color: var(--main-color);
+}
+
