@@ -8,8 +8,10 @@
    const OVERFLOW_THRESHOLD = 50;
    const STAR_COUNT = ( window.innerWidth + window.innerHeight ) / 8;
    
-   const canvas = document.querySelector( 'canvas' ),
+   const canvas = document.querySelector( 'canvas.bgcontato'),
          context = canvas.getContext( '2d' );
+   const canvasContato= document.querySelector( '.bghome' ),
+         contextContato = canvasContato.getContext( '2d' );
    
    let scale = 1, // device pixel ratio
        width,
@@ -32,6 +34,9 @@
    canvas.onmousemove = onMouseMove;
    canvas.ontouchmove = onTouchMove;
    canvas.ontouchend = onMouseLeave;
+   canvasContato.onmousemove = onMouseMove;
+   canvasContato.ontouchmove = onTouchMove;
+   canvasContato.ontouchend = onMouseLeave;
    document.onmouseleave = onMouseLeave;
    
    function generate() {
@@ -113,6 +118,8 @@
    
      canvas.width = width;
      canvas.height = height;
+     canvasContato.width = width;
+     canvasContato.height = height;
    
      stars.forEach( placeStar );
    
@@ -121,6 +128,7 @@
    function step() {
    
      context.clearRect( 0, 0, width, height );
+     contextContato.clearRect( 0, 0, width, height );
    
      update();
      render();
@@ -167,6 +175,15 @@
    
        context.beginPath();
        context.moveTo( star.x, star.y );
+
+       contextContato.beginPath();
+       contextContato.lineCap = 'round';
+       contextContato.lineWidth = STAR_SIZE * star.z * scale;
+       contextContato.globalAlpha = 0.5 + 0.5*Math.random();
+       contextContato.strokeStyle = STAR_COLOR;
+   
+       contextContato.beginPath();
+       contextContato.moveTo( star.x, star.y );
    
        var tailX = velocity.x * 2,
            tailY = velocity.y * 2;
@@ -178,6 +195,10 @@
        context.lineTo( star.x + tailX, star.y + tailY );
    
        context.stroke();
+
+       contextContato.lineTo( star.x + tailX, star.y + tailY );
+   
+       contextContato.stroke();
    
      } );
    

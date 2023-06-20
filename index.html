@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" type="wkice e-sport/png" href="imagens/wkice e-sport.png">
+
     <title>Portifólio wkice</title>
     <link rel="stylesheet" href="css/index.css">
     
@@ -13,7 +15,7 @@
     <script type="text/script" src="js/wkice/navbar.js"></script>
     
 </head>
-<canvas></canvas>
+<canvas class="bghome"></canvas>
 <body>
     
 
@@ -31,7 +33,7 @@
             <a href="#contato">Contato</a>
          </nav>
     </header>
-
+<!--Página Home-->
     <section class="home" id="home">
         <div class="home-content">
             <h1> Olá, Eu sou o Wilker</h1>
@@ -53,7 +55,7 @@
         </div>
     </section>
 
-
+<!--Página Sobre-->
     <section class="sobre" id="sobre">
         <h2 class="heading"> Sobre <span> Mim</span></h2>
 
@@ -73,7 +75,7 @@
         </div>
     </section>
 
-
+<!--Página Educação-->
     <section class="educacao" id="educacao">
         <h2 class="heading"> Minha <span>Jornada</span></h2>
         
@@ -132,8 +134,11 @@
         </div>
     </section>
 
+
+<!--Página Habilidade-->    
     <section class="habilidade" id="habilidade">
         <h2 class="heading">Minhas <span>Habilidades</span></h2>
+        
         <div class="habilidade-linha">
             <div class="habilidade-coluna">
                 <h3 class="titulo">Codificação</h3>
@@ -191,10 +196,16 @@
 
     </section>
     
+
+<!--Página Contato-->
     <section class="contato" id="contato">
+        
+        <canvas class="bgcontato"></canvas><!--background estrela-->
+
         <h2 class="heading">Contate-<span>me</span></h2>
 
         <form action="#">
+
             <div class="input-box">
                 <div class="input-field">
                     <input type="text" placeholder="Nome Completo" required>
@@ -219,7 +230,6 @@
                 <textarea name="" id="" cols="30" rows="10" placeholder="Sua Mensagem" required></textarea>
                 <span class="focus"></span>
             </div>
-
             <div class="btn-box btns">
                <button type="submit" class="btn">Enviar</button>
             </div>
@@ -227,13 +237,14 @@
         </form>
     </section>
         
+<!--Rodapé-->    
     <footer class="footer">
         <div class="footer-text">
             <p>Copyright &copy; 2023 by Codehal | Todos os direitos Reservado</p>
         </div>
 
         <div class="footer-iconTop">
-            <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
+            <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
         </div>
     </footer>
 

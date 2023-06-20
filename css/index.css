@@ -35,18 +35,8 @@ html{
 }
 
 
-/* background de estrela */
-  canvas {
-    position:absolute;
-    width: 100%;
-    height: 100%;
-  }
+
   
-
-
-
-
-
 
 body {
     background: var(--bg-color);
@@ -140,6 +130,12 @@ section {
     padding: 0 9%;
 }
 
+/* background de estrela na página Home*/
+.bghome {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+  }
 
 
 .home-image{
@@ -247,7 +243,11 @@ section {
     z-index: 2;
    
 }
-
+.btn:hover{
+    border-radius: .6rem;
+    box-shadow: 1px 1px 10px var(--main-color);
+    transition: .5s;
+}
 .btn-box{
     position: relative;
     display: flex;
@@ -367,6 +367,12 @@ section {
 
 .home-sci a:hover::before{
     width: 100%;
+}
+
+.home-sci  a:hover{
+    border-radius: .6rem;
+    box-shadow: 1px 1px 15px var(--main-color);
+    transition: .5s;
 }
 
 @keyframes showRight{ 
@@ -518,6 +524,11 @@ span{
 .educacao-content .content:hover::before{
     width: 100%;
 }
+.educacao-content .content:hover{
+    border-radius: .6rem;
+    box-shadow: 1px 1px 10px var(--main-color);
+    transition: .5s;
+}
 
 .educacao-content .content .year{
     font-size: 1.5rem;
@@ -583,10 +594,16 @@ span{
 .habilidade-box .habilidade-content:hover::before{
     width: 100%;
 }
+.habilidade-box:hover{
+    border-radius: .6rem;
+    box-shadow: 1px 1px 10px var(--main-color);
+    transition: .5s;
+}
 
 .habilidade-content .progresso{
     padding: 1rem 0;
 }
+
 
 .habilidade-content .progresso h3{
     font-size: 1.7rem;
@@ -639,26 +656,46 @@ span{
 
 /*Página contato*/
 .contato{
-    background:-webkit-image-set('canvas');
     min-height: auto;
     padding-bottom: 4rem;
+    background-color: transparent;
+    z-index: 1;
+}
+
+/*backgound de estrela na página contato*/
+.contato .bgcontato{
+    position: absolute;
+    padding: 0;
+    left: 0;
+    width: 100%;
+    height: 56rem;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    
+}
+.contato h2{
+    z-index: 2;
 }
 
 .contato form{
     max-width: 70rem;
     margin: 0 auto;
     text-align: center;
+    z-index: 2;
 }
 .contato form .input-box{
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    z-index: 2;
 }
 .contato form .input-box .input-field{
     position: relative;
     width: 49%;
     margin: .8rem 0;
+   
 }
 .contato form .input-box .input-field input,
 .contato form .textarea-field textarea{
@@ -670,6 +707,7 @@ span{
     color: var(--text-color);
     border-radius: .6rem;
     border: .2rem solid var(--main-color);
+    z-index: 2;
 }
 
 .contato form .input-box .input-field input::placeholder,
@@ -693,12 +731,14 @@ span{
 .contato form .textarea-field textarea:focus~.focus,
 .contato form .textarea-field textarea:valid~.focus{
 width: 100%;
+box-shadow: 1px 1px 10px;
 }
 
 .contato form .textarea-field{
     position: relative;
     margin: .8rem 0 2.7rem;
     display: flex;
+    z-index: 2;
 }
 .contato form .textarea-field textarea{
     resize: none;
